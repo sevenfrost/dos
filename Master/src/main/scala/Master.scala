@@ -3,6 +3,7 @@ import akka.actor.Actor
 import akka.actor.Props
 import akka.actor.ActorSystem
 import akka.routing.RoundRobinRouter
+import java.security.MessageDigest
 
 trait Message
 case object Mining extends Message
@@ -20,14 +21,21 @@ case object Stop extends Message
       if (num / 95 == 0)  s else s + map(num / 95)
     }
  
+
     def receive = {
       case Start => 
         sender ! AskForTask
         
       case Work(uf, k, start, nrOfElements) =>
+         val md = MessageDigest.getInstance("SHA-256");
+         def hex_digest(s: String): String = {
+			md.digest(s.getBytes).foldLeft("")((s: String, b: Byte) => 
+			  s + Character.forDigit((b & 0xf0) >> 4, 16) + Character.forDigit(b & 0x0f, 16))
+         }
         for (i <- start until nrOfElements + start) {
           var s = uf + map(i)
-          var sha256hex = org.apache.commons.codec.digest.DigestUtils.sha256Hex(s);
+          //var sha256hex = org.apache.commons.codec.digest.DigestUtils.sha256Hex(s);
+          var sha256hex = hex_digest(s)
           try {
         	  val foo = Integer.parseInt(sha256hex.substring(0, k));
         	  if (foo == 0) {
@@ -46,7 +54,7 @@ case object Stop extends Message
   }
   
   class Master(uf: String, k: Int, nrOfWorkers: Int, nrOfMessages: Int, nrOfElements: Int) extends Actor {
-    val start: Long = System.currentTimeMillis
+    //val start: Long = System.currentTimeMillis
     var MessageSent = 0
     var stopnum = 0
     def receive = {
@@ -67,24 +75,24 @@ case object Stop extends Message
         else {
           sender ! Stop
           stopnum = stopnum + 1
-	  println(stopnum)
+          //println(stopnum)
         }
 	//println(MessageSent)
 	//println(stopnum)
-        if (stopnum == 3) {
-	  println("supposed to stop")
-	  context.system.shutdown()
+        if (stopnum == 2) {
+        	println("supposed to stop")
+        	context.system.shutdown()
     	}
     } 	
   }
   
   object Master {
     def main(args: Array[String]) {
-      val k = if (args.length > 0) args(0) toInt else 4
+      val k = if (args.length > 0) args(0) toInt else 5
       val uf = "shuanglin"
-      val nrOfWorkers = 3
-      val nrOfMessages = 3
-      val N = 1000000
+      val nrOfWorkers = 2
+      val nrOfMessages = 2
+      val N = 5000000
       val system = ActorSystem("Master")
 	  val master = system.actorOf(Props(new Master(uf, k, nrOfWorkers, nrOfMessages, N)),name = "MasterActor")
 		master ! Mining
