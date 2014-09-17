@@ -51,7 +51,7 @@ case object Stop extends Message
     var stopnum = 0
     def receive = {
       case Result(bitcoin, hash) =>;
-       // println(bitcoin + '\t' + hash)
+        println(bitcoin + '\t' + hash)
         
       case Mining => 
         for (i <- 0 until nrOfWorkers) {
@@ -82,9 +82,9 @@ case object Stop extends Message
     def main(args: Array[String]) {
       val k = if (args.length > 0) args(0) toInt else 4
       val uf = "shuanglin"
-      val nrOfWorkers = 2
-      val nrOfMessages = 100
-      val N = 100000
+      val nrOfWorkers = 3
+      val nrOfMessages = 3
+      val N = 1000000
       val system = ActorSystem("Master")
 	  val master = system.actorOf(Props(new Master(uf, k, nrOfWorkers, nrOfMessages, N)),name = "MasterActor")
 		master ! Mining
