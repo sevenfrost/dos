@@ -1,0 +1,63 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /Users/slin/Movies/dos/Worker/src/main/scala/target/scala-2.10/classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.4[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.4[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 4ea3614b, interfacing (CompilerInterface) with Scala compiler version 2.10.4[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/classes:/Users/slin/.sbt/boot/scala-2.10.4/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/Users/slin/Movies/dos/Worker/src/main/scala/target/scala-2.10/classes[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:3: not found: object akka[0m
+[0m[[31merror[0m] [0mimport akka.actor.Actor[0m
+[0m[[31merror[0m] [0m       ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:4: not found: object akka[0m
+[0m[[31merror[0m] [0mimport akka.actor.Props[0m
+[0m[[31merror[0m] [0m       ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:5: not found: object akka[0m
+[0m[[31merror[0m] [0mimport akka.routing.RoundRobinRouter[0m
+[0m[[31merror[0m] [0m       ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:6: not found: object akka[0m
+[0m[[31merror[0m] [0mimport akka.actor.ActorSystem[0m
+[0m[[31merror[0m] [0m       ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:16: not found: type Actor[0m
+[0m[[31merror[0m] [0mclass Worker(ip: String) extends Actor {[0m
+[0m[[31merror[0m] [0m                                 ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:18: not found: value context[0m
+[0m[[31merror[0m] [0m    val master = context.actorFor(masterRef)[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:25: missing parameter type for expanded function[0m
+[0m[[31merror[0m] [0mThe argument types of an anonymous function must be fully known. (SLS 8.5)[0m
+[0m[[31merror[0m] [0mExpected type was: ?[0m
+[0m[[31merror[0m] [0m    def receive = {[0m
+[0m[[31merror[0m] [0m                  ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:33: object apache is not a member of package org[0m
+[0m[[31merror[0m] [0m          var sha256hex = org.apache.commons.codec.digest.DigestUtils.sha256Hex(s);[0m
+[0m[[31merror[0m] [0m                              ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:37: not found: value sender[0m
+[0m[[31merror[0m] [0m        	    sender ! Result(s, sha256hex)[0m
+[0m[[31merror[0m] [0m        	    ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:48: not found: value context[0m
+[0m[[31merror[0m] [0m        context.stop(self)[0m
+[0m[[31merror[0m] [0m        ^[0m
+[0m[[31merror[0m] [0m/Users/slin/Movies/dos/Worker/src/main/scala/Worker.scala:55: not found: value ActorSystem[0m
+[0m[[31merror[0m] [0m    val system = ActorSystem("BitCoinSystem")[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m11 errors found[0m
+[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
+[0m[[31merror[0m] [0m(compile:[31mcompile[0m) Compilation failed[0m
