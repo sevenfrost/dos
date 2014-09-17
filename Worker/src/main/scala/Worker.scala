@@ -12,10 +12,9 @@ case class Result(bitcoin: String, hash: String) extends Message
 case object AskForTask extends Message
 case object Start extends Message
 case object Stop extends Message
+case object WorkDone extends Message
 
-class Worker(ip: String) extends Actor {
-	val masterRef = "akka.tcp://Master@" + ip + ":2666/user/MasterActor"
-    val master = context.actorFor(masterRef)
+class Worker extends Actor {
     
 	def map(num: Int):String = {
       var s = (32 + num % 95).toChar.toString
@@ -23,9 +22,7 @@ class Worker(ip: String) extends Actor {
     }
  
     def receive = {
-      case Start => 
-        master ! AskForTask
-        
+ 
       case Work(uf, k, start, nrOfElements) =>
         println("get work")
         for (i <- start until nrOfElements + start) {
@@ -41,20 +38,44 @@ class Worker(ip: String) extends Actor {
           	case e:NumberFormatException => ;
           }
         }
-        master ! AskForTask
-        
-      case Stop => 
-        println("stop message received")
-        //context.stop(self)
-        context.system.shutdown()
+        sender ! WorkDone
+        context.stop(self)
     }
   }
+
+class WorkerMaster(ip: String, nrOfWorkers: Int) extends Actor {
+  val masterRef = "akka.tcp://Master@" + ip + ":2666/user/MasterActor"
+  val master = context.actorFor(masterRef)
+  var doneWorker = 0
+  def receive = {
+      case Start => 
+        master ! AskForTask
+
+      case Work(uf, k, start, nrOfElements) =>
+        for (i <- 0 until nrOfWorkers) {
+          val worker = context.actorOf(Props[Worker], name = "worker"+i)
+          worker ! Work(uf, k, start + i * (nrOfElements/nrOfWorkers), nrOfElements/nrOfWorkers)
+        }
+        
+      case Result(bitcoin, hash) =>
+        master ! Result(bitcoin, hash)
+        
+      case WorkDone => 
+        doneWorker = doneWorker + 1
+        if (doneWorker == nrOfWorkers) master ! AskForTask
+        
+      case Stop => 
+        println("stop")
+        context.system.shutdown()
+  }  
+}
 
 object Worker {
 	def main(args: Array[String]) {
     val ip = if (args.length > 0) args(0)  else "128.227.248.195"
     val system = ActorSystem("BitCoinSystem")
-    val worker = system.actorOf(Props(new Worker(ip)), name = "worker")
-    worker ! Start
+    val nrOfWorkers = 2
+    val workerM = system.actorOf(Props(new WorkerMaster(ip, nrOfWorkers)), name = "worker")
+    workerM ! Start
   }
 }
