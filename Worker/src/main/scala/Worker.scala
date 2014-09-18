@@ -7,7 +7,7 @@ import akka.actor.ActorSystem
 
 
 trait Message
-case class Work(uf: String, k: Int, start: Int, nrOfElements: Int) extends Message
+case class Work(uf: String, k: Int, start: Long, nrOfElements: Long) extends Message
 case class Result(bitcoin: String, hash: String) extends Message
 case object AskForTask extends Message
 case object Start extends Message
@@ -16,7 +16,7 @@ case object WorkDone extends Message
 
 class Worker extends Actor {
     
-	def map(num: Int):String = {
+	def map(num: Long):String = {
       var s = (32 + num % 95).toChar.toString
       if (num / 95 == 0)  s else s + map(num / 95)
     }
