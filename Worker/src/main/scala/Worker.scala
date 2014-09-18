@@ -1,5 +1,5 @@
 
-
+import akka.actor._
 import akka.actor.Actor
 import akka.actor.Props
 import akka.routing.RoundRobinRouter
@@ -43,7 +43,7 @@ class Worker extends Actor {
     }
   }
 
-class WorkerMaster(ip: String, nrOfWorkers: Int) extends Actor {
+class WorkerMaster(ip: String, nrOfWorkers: Int, listener: ActorRef) extends Actor {
   val masterRef = "akka.tcp://Master@" + ip + ":2666/user/MasterActor"
   val master = context.actorFor(masterRef)
   var doneWorker = 0
@@ -70,16 +70,24 @@ class WorkerMaster(ip: String, nrOfWorkers: Int) extends Actor {
       case Stop => 
         println("stop")
         context.stop(self)
-        context.system.shutdown()
+        listener ! Stop
   }  
+}
+
+class Listener extends Actor {
+  def receive = {
+    case Stop =>
+      context.system.shutdown()
+  }
 }
 
 object Worker {
 	def main(args: Array[String]) {
     val ip = if (args.length > 0) args(0)  else "128.227.248.195"
     val system = ActorSystem("Worker")
+    val listener = system.actorOf(Props[Listener], name = "Listener")
     val nrOfWorkers = 2
-    val workerM = system.actorOf(Props(new WorkerMaster(ip, nrOfWorkers)), name = "worker")
+    val workerM = system.actorOf(Props(new WorkerMaster(ip, nrOfWorkers, listener)), name = "worker")
     workerM ! Start
   }
 }

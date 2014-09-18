@@ -1,4 +1,4 @@
-
+import akka.actor._
 import akka.actor.Actor
 import akka.actor.Props
 import akka.actor.ActorSystem
@@ -53,7 +53,7 @@ case object Stop extends Message
     
   }
   
-  class Master(uf: String, k: Int, nrOfWorkers: Int, nrOfMessages: Int, nrOfElements: Long) extends Actor {
+  class Master(uf: String, k: Int, nrOfWorkers: Int, nrOfMessages: Int, nrOfElements: Long, listener: ActorRef) extends Actor {
     //val start: Long = System.currentTimeMillis
     var MessageSent = 0
     var stopnum = 0
@@ -81,11 +81,16 @@ case object Stop extends Message
         if (stopnum == 3) {
           println("supposed to stop")
           context.stop(self)
- 	  context.system.shutdown()
+ 	  listener ! Stop
+          //context.system.shutdown()
     	}
     } 	
   }
-  
+  class Listener extends Actor {
+    def receive = {
+	case Stop => context.system.shutdown()
+	}
+  }
   object Master {
     def main(args: Array[String]) {
       val k = if (args.length > 0) args(0) toInt else 5
@@ -94,7 +99,8 @@ case object Stop extends Message
       val nrOfMessages = 10
       val N = 500000
       val system = ActorSystem("Master")
-	  val master = system.actorOf(Props(new Master(uf, k, nrOfWorkers, nrOfMessages, N)),name = "MasterActor")
+      val listener = system.actorOf(Props[Listener], name = "Listener")
+	  val master = system.actorOf(Props(new Master(uf, k, nrOfWorkers, nrOfMessages, N, listener)),name = "MasterActor")
 		master ! Mining
 	  }
   }

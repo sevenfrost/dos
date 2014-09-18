@@ -16,32 +16,30 @@
 [0m[[0mdebug[0m] [0m	/cise/homes/slin/.ivy2/cache/org.uncommons.maths/uncommons-maths/jars/uncommons-maths-1.2.2a.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main to exit[0m
 [0m[[0mdebug[0m] [0m	Thread run-main exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.actor.default-dispatcher-3 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-akka.actor.default-dispatcher-3 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.remote.default-remote-dispatcher-7 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-akka.remote.default-remote-dispatcher-7 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-9 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-9 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.remote.default-remote-dispatcher-6 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-akka.remote.default-remote-dispatcher-6 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-13 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-13 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-14 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-14 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-8 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-8 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.actor.default-dispatcher-5 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-akka.actor.default-dispatcher-5 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-11 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-11 exited.[0m
 [0m[[0mdebug[0m] [0mWaiting for thread Master-scheduler-1 to exit[0m
 [0m[[0mdebug[0m] [0m	Thread Master-scheduler-1 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.remote.default-remote-dispatcher-6 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-akka.remote.default-remote-dispatcher-6 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-8 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-8 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.remote.default-remote-dispatcher-5 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-akka.remote.default-remote-dispatcher-5 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-7 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-7 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-10 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-10 exited.[0m
 [0m[[0mdebug[0m] [0mWaiting for thread Master-akka.actor.default-dispatcher-2 to exit[0m
 [0m[[0mdebug[0m] [0m	Thread Master-akka.actor.default-dispatcher-2 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.actor.default-dispatcher-4 to exit[0m
-[0m[[0mdebug[0m] [0m	Thread Master-akka.actor.default-dispatcher-4 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-11 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-11 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.actor.default-dispatcher-3 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-akka.actor.default-dispatcher-3 exited.[0m
 [0m[[0mdebug[0m] [0mWaiting for thread Master-12 to exit[0m
 [0m[[0mdebug[0m] [0m	Thread Master-12 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-13 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-13 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread Master-akka.actor.default-dispatcher-4 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread Master-akka.actor.default-dispatcher-4 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m
