@@ -69,19 +69,19 @@ case object Stop extends Message
         
       case AskForTask => 
         if (MessageSent < nrOfMessages) {
-          sender ! Work(uf, k, MessageSent * nrOfElements, nrOfElements)
+          sender ! Work(uf, k, MessageSent * nrOfElements + 2147483647, nrOfElements)
           MessageSent = MessageSent + 1
+	  println("sent" + MessageSent)
         }
         else {
           sender ! Stop
+	  println("stop sent" + stopnum)
           stopnum = stopnum + 1
-          //println(stopnum)
         }
-	//println(MessageSent)
-	//println(stopnum)
-        if (stopnum == 2) {
-        	println("supposed to stop")
-        	context.system.shutdown()
+        if (stopnum == 3) {
+          println("supposed to stop")
+          context.stop(self)
+ 	  context.system.shutdown()
     	}
     } 	
   }
@@ -91,8 +91,8 @@ case object Stop extends Message
       val k = if (args.length > 0) args(0) toInt else 5
       val uf = "shuanglin"
       val nrOfWorkers = 2
-      val nrOfMessages = 2
-      val N = 5000000
+      val nrOfMessages = 10
+      val N = 500000
       val system = ActorSystem("Master")
 	  val master = system.actorOf(Props(new Master(uf, k, nrOfWorkers, nrOfMessages, N)),name = "MasterActor")
 		master ! Mining

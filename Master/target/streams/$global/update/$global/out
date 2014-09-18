@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/cise/homes/slin/Master/}master...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/cise/homes/slin/Public1/Master/}master...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: master#master_2.10;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for master#master_2.10;0.1-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies master#master_2.10;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6769e201[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@351e0511[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4 in sbt-chain[0m
@@ -346,19 +346,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies master#master_2.10;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->default][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.4 {scala-tool=[default, optional(default)]}[0m
-[0m[[0mdebug[0m] [0m		tried /cise/homes/slin/.ivy2/local/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-compiler;2.10.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-compiler;2.10.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom (2.10.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.10.4!scala-compiler.pom(pom.original) (346ms)[0m
-[0m[[0mdebug[0m] [0m		tried /cise/homes/slin/.ivy2/local/org.scala-lang/scala-compiler/2.10.4/jars/scala-compiler.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.10.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-compiler;2.10.4[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.10.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies master#master_2.10;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies master#master_2.10;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.4 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->master(*)][0m
@@ -371,19 +361,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-reflect;2.10.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /cise/homes/slin/.ivy2/local/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.10.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-reflect;2.10.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom (2.10.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.4!scala-reflect.pom(pom.original) (293ms)[0m
-[0m[[0mdebug[0m] [0m		tried /cise/homes/slin/.ivy2/local/org.scala-lang/scala-reflect/2.10.4/jars/scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.10.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-reflect;2.10.4[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.10.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.4] org.scala-lang#scala-reflect;2.10.4[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-reflect;2.10.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->master(*)][0m
@@ -399,19 +379,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#jline;2.10.4 [optional->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#jline;2.10.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.4 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /cise/homes/slin/.ivy2/local/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#jline;2.10.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#jline;2.10.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.pom (2.10.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#jline;2.10.4!jline.pom(pom.original) (288ms)[0m
-[0m[[0mdebug[0m] [0m		tried /cise/homes/slin/.ivy2/local/org.scala-lang/jline/2.10.4/jars/jline.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#jline;2.10.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#jline;2.10.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#jline;2.10.4[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#jline;2.10.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#jline;2.10.4 [optional->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.4->org.fusesource.jansi#jansi;1.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.fusesource.jansi#jansi;1.4 ...[0m
@@ -425,7 +395,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies master#master_2.10;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies master#master_2.10;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies master#master_2.10;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->optional(default)][0m
-[0m[[0mdebug[0m] [0m	resolved ivy file produced in /cise/homes/slin/Master/target/resolution-cache/master/master_2.10/0.1-SNAPSHOT/resolved.xml.xml[0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in /cise/homes/slin/Public1/Master/target/resolution-cache/master/master_2.10/0.1-SNAPSHOT/resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.6!akka-actor_2.10.jar[0m
@@ -434,38 +404,23 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty;3.8.0.Final!netty.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.protobuf#protobuf-java;2.5.0!protobuf-java.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.uncommons.maths#uncommons-maths;1.2.2a!uncommons-maths.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar (2922ms)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar (481ms)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.4/jline-2.10.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#jline;2.10.4!jline.jar (340ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2168ms :: artifacts dl 3775ms[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT compile produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT runtime produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT test produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT provided produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT optional produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT compile-internal produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT runtime-internal produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT test-internal produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT plugin produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT sources produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT docs produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT pom produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT scala-tool produced in /cise/homes/slin/Master/target/resolution-cache/reports/master-master_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2168ms resolve - 3775ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1400ms :: artifacts dl 70ms[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT compile produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT runtime produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT test produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT provided produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT optional produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT compile-internal produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT runtime-internal produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT test-internal produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT plugin produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT sources produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT docs produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT pom produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for master#master_2.10;0.1-SNAPSHOT scala-tool produced in /cise/homes/slin/Public1/Master/target/resolution-cache/reports/master-master_2.10-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1400ms resolve - 70ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

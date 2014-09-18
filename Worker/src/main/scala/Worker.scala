@@ -62,10 +62,14 @@ class WorkerMaster(ip: String, nrOfWorkers: Int) extends Actor {
         
       case WorkDone => 
         doneWorker = doneWorker + 1
-        if (doneWorker == nrOfWorkers) master ! AskForTask
-        
+        if (doneWorker == nrOfWorkers) {
+            master ! AskForTask
+            doneWorker = 0
+        }
+        println("Done")        
       case Stop => 
         println("stop")
+        context.stop(self)
         context.system.shutdown()
   }  
 }
@@ -73,7 +77,7 @@ class WorkerMaster(ip: String, nrOfWorkers: Int) extends Actor {
 object Worker {
 	def main(args: Array[String]) {
     val ip = if (args.length > 0) args(0)  else "128.227.248.195"
-    val system = ActorSystem("BitCoinSystem")
+    val system = ActorSystem("Worker")
     val nrOfWorkers = 2
     val workerM = system.actorOf(Props(new WorkerMaster(ip, nrOfWorkers)), name = "worker")
     workerM ! Start
