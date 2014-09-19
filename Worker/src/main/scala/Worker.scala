@@ -24,7 +24,7 @@ class Worker extends Actor {
     def receive = {
  
       case Work(uf, k, start, nrOfElements) =>
-        println("get work")
+        //println("get work")
         for (i <- start until nrOfElements + start) {
           var s = uf + map(i)
           var sha256hex = org.apache.commons.codec.digest.DigestUtils.sha256Hex(s);
@@ -66,7 +66,7 @@ class WorkerMaster(ip: String, nrOfWorkers: Int, listener: ActorRef) extends Act
             master ! AskForTask
             doneWorker = 0
         }
-        println("Done")        
+       // println("Done")        
       case Stop => 
         println("stop")
         context.stop(self)
@@ -86,7 +86,7 @@ object Worker {
     val ip = if (args.length > 0) args(0)  else "128.227.248.195"
     val system = ActorSystem("Worker")
     val listener = system.actorOf(Props[Listener], name = "Listener")
-    val nrOfWorkers = 2
+    val nrOfWorkers = 4
     val workerM = system.actorOf(Props(new WorkerMaster(ip, nrOfWorkers, listener)), name = "worker")
     workerM ! Start
   }

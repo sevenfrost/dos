@@ -15,18 +15,8 @@
 [0m[[0mdebug[0m] [0m	/Users/slin/.ivy2/cache/org.uncommons.maths/uncommons-maths/jars/uncommons-maths-1.2.2a.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread New I/O worker #4 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread Master-11 exited.[0m
 [0m[[0mdebug[0m] [0mWaiting for thread Master-akka.actor.default-dispatcher-2 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread Master-akka.actor.default-dispatcher-2 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-3-worker-7[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-3-worker-7[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-3-worker-5[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-3-worker-5[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Master-9[0m
-[0m[[0mdebug[0m] [0m	Interrupted Master-9[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

@@ -1,0 +1,48 @@
+COP5615 Fall 2014 Project 1 Due Date: Sep 19, Midnight
+
+By 
+Shuang Lin 4263-6618
+Shuying Wang 
+
+> Size of work unit
+
+We test 10,000,000 total computations with different work units on a two-core machine. Time table are given below:
+
+Work unit     Real     usr + sys    
+5000000       52.96    104.44
+2000000       58.27    100.69     
+1000000       53.20    104.95
+100000        53.95    107.09
+10000         55.02    108.97
+1000          56.61    112.06
+
+
+> The result of running [scala project1.scala 4]
+run 1,000,000 computations got following results:
+
+shuanglin*\sB:	000022071f612d754aac6b085c3f5af7caf793e5b3e6f071a9f6ff8243d9c0ad
+shuanglinF`kB:	00005012ce1ddd270f54f095fb0e9c326479767e41d31df613dcd73f02c2e741
+shuanglin7=}B:	00008174385c5fd1d656bf0040607c499be244faebd113abc4470fc1212fd5ad
+shuanglinEH2C:	0000b9f9c3c82b0b58e0bcde90e329e9f6a3e7a29ebb55850ebfac0f44c7d25c
+shuanglin>;AC:	00009a78941ea0436a1bdf7a5f12f9c2f963f82b017a389ca62c89b60246eb01
+shuanglinCM6C:	0000bb94c2a20a065b847d1f67d1e4381ded3df142ef45f40215fb23f55d9d96
+shuanglinqMAC:	0000ad481145b4719b7d7472d66f24885d2a9ad99c0cb7b0fbe5f4c6d7650249
+shuanglinA&<C:	0000765677a6fb58d229d32e4b3391f73e6611ef138951de56da2fd43f59ab2f
+shuanglinhuHC:	0000781356afec2c67d9b4e105446e421a5cd3561f9d30d2550cd3664c3a0a11
+shuanglinP4TC:	000098a4e3e23f73c2de88e84bceb7463c6a5f9659eb4ca65ccd915a89937249
+shuanglinSIRC:	0000b3de6bb43d0256ff91934e4c6f960c2e76d6160c9f93d7486f9646b7be61
+shuanglinzR]C:	000032c8bb54122cbd888a91b7c4ae7cb0ddebb7e167993f4f405ca8f8377953
+shuanglin_jkC:	00002173dc13175de9b8f35d6149b8de5276fca96a366eb1273c18e44b5d1216
+shuanglinXLhC:	0000ed2c5d344d35d137e5d54850ff6551e2e04f771152f669a7fae35c0e073d
+
+
+> The running time for [time scala project1.scala 5]
+
+
+> The coins with the most 0s managed to find (8 0s)
+shuanglin]vmtN	000000009170d56d9f4ebe545054027c1df5bfb67417c28f6bdb173de9d02f43
+shuanglinKXiPY	0000000014cde95f10ed95663f82056ece467c62dc309a11228b40d628b02b3a 
+
+> largest number of working machines able to run 
+We run on 11 machines, 1 as server, 10 as client connect to server. 
+

@@ -71,14 +71,14 @@ case object Stop extends Message
         if (MessageSent < nrOfMessages) {
           sender ! Work(uf, k, MessageSent * nrOfElements + 2147483647, nrOfElements)
           MessageSent = MessageSent + 1
-	  println("sent" + MessageSent)
+	     // println("sent" + MessageSent)
         }
         else {
           sender ! Stop
-	  println("stop sent" + stopnum)
+	      //println("stop sent" + stopnum)
           stopnum = stopnum + 1
         }
-        if (stopnum == 3) {
+        if (stopnum == 2) {
           println("supposed to stop")
           context.stop(self)
  	  listener ! Stop
@@ -93,11 +93,11 @@ case object Stop extends Message
   }
   object Master {
     def main(args: Array[String]) {
-      val k = if (args.length > 0) args(0) toInt else 5
+      val k = if (args.length > 0) args(0) toInt else 4
       val uf = "shuanglin"
       val nrOfWorkers = 2
-      val nrOfMessages = 10
-      val N = 500000
+      val nrOfMessages = 10000000
+      val N = 100000
       val system = ActorSystem("Master")
       val listener = system.actorOf(Props[Listener], name = "Listener")
 	  val master = system.actorOf(Props(new Master(uf, k, nrOfWorkers, nrOfMessages, N, listener)),name = "MasterActor")
