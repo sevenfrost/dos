@@ -2,20 +2,17 @@ COP5615 Fall 2014 Project 1 Due Date: Sep 19, Midnight
 
 By 
 Shuang Lin 4263-6618
-Shuying Wang 
+Shuying Wang 3119-5133
 
-> Size of work unit
+> Size of work unit [using “time scala project1.scala 5”]
 
-We test 10,000,000 total computations with different work units on a two-core machine. Time table are given below:
+We test 10,000,000 total computations with different work units on a two-core machine. 
+We tested 2, 3, 4, 10 actors as workers. The one with 3 actors performs best. So the results with different work units below is based on 3 actors. Time table are given below:
 
-Work unit     Real     usr + sys    
-5000000       52.96    104.44
-2000000       58.27    100.69     
-1000000       53.20    104.95
-100000        53.95    107.09
-10000         55.02    108.97
-1000          56.61    112.06
+Work unit      Real(s) usr + sys (s)    ratio
+5000,000       31.24    62.19            50.2%2000,000       28.46    67.28            42.3%    1000,000       28.18    70.69 		 39.9%100,000        25.85    70.77		 36.5%10,000         26.43    71.84		 36.8%	1000           27.72    73.91		 37.5%
 
+The work unit with best performance is 100000 because its real time is the least. From the data below, we can tell the real time costed by the program becomes lesser and arrives the least at 100000 and then increases again. When the work unit is too small, there is more time spent in communication between master and workers. When the work unit is too big, the computation of worker actor becomes the bottleneck and can’t utilize the abilities of processors fully. There is a tradeoff on work unit and work distribution times. For this problem, we choose 100,000 as our work units.
 
 > The result of running [scala project1.scala 4]
 run 1,000,000 computations got following results:
@@ -37,12 +34,29 @@ shuanglinXLhC:	0000ed2c5d344d35d137e5d54850ff6551e2e04f771152f669a7fae35c0e073d
 
 
 > The running time for [time scala project1.scala 5]
-
+Check 10,000,000 strings, the running time is
+real time: 28.18s  ;  use + sys: 70.69s
 
 > The coins with the most 0s managed to find (8 0s)
 shuanglin]vmtN	000000009170d56d9f4ebe545054027c1df5bfb67417c28f6bdb173de9d02f43
 shuanglinKXiPY	0000000014cde95f10ed95663f82056ece467c62dc309a11228b40d628b02b3a 
 
 > largest number of working machines able to run 
-We run on 11 machines, 1 as server, 10 as client connect to server. 
+We run on 11 machines, 1 as server, 10 as client connect to server. lin116-00 ~ lin116-10
+Took us about 30 mins to check 10,000,000,000 strings, about 5 times faster than the single machine.
 
+How to run the code:
+1. For single machine version, add akka, lib we provided to class path. run:
+	scalac project1 
+	scala project1 4
+     Or install sbt, go to single_machine_version folder run [sbt “project single_machine_version” “run 4”]
+2. For distributed version, we provided Worker and Master folder. 
+	- Install sbt
+	- Make change to the ip address in src/main/resource/application.conf for both 		  master and worker
+	- Under Master folder: 
+		- sbt run
+	- Under Worker folder:
+		- sbt “project Worker” “run [ip address]”
+
+Feel free to contact us if you have any problem running our code.
+Email: slin@cise.ufl.edu， shuying@cise.ufl.edu
